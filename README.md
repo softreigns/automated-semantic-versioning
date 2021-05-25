@@ -51,6 +51,8 @@ Problem: how to automated semantic versioning without having to manually maintai
       2. Increment patch if there is any change in unit tests (src/test/unit/** match).
       3. Increment minor number if there is any change in the integration tests (src/test/integration/** match) and reset minor number.
       4. Increment major number if there is any change in the client tests (src/test/client/** match) and reset minor and path numbers.
+          - some way to distinguish old test vs new (to identifify backward compatibility of change) ?
+          - if the for any backward change, only new tests/files are added and hence, if the change has any new files, this can be considered backward compatible and hence same major number but increment minor number only.
       5. For any non main/release branch add branch name (feature/add-logs) in the 1.0.1-feature-add-log-BuildXX, assuming that it would change some unit tests. Once the code get merged to the main, feature branch gets dropped and 1.0.1-BuildXX the new version from main.
   
   
